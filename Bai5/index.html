@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai5</title>
+    
+    <style>
+        /* loại 2: internal style là bên ngoài thẻ nhưng vẫn trong cùng file html */
+        h2{
+            /* color dùng để quy định màu chữ */
+        
+            color:red; 
+        }
+        #tieuDe{
+            color:orange;
+        }
+    </style>
+        <!-- link dẫn đến file css riêng -->
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <!-- I. các kiểu viết style -->
+    <!-- Kiểu 1 viết style trong thẻ -->
+    <!-- loại 1:inline style là trong thẻ -->
+    <h1 style="color: blue;">HUMG</h1>
+    <!-- Kiểu 2 viết ngoại thẻ (style ở phía trên)-->
+    <h2>Trường đại học Mỏ - Địa Chất</h2>
+    <h3>Lớp phát triển ứng dụng web 03</h3>
+    <!-- II. selector -->
+    <!-- cách 1: dùng tên thẻ -->
+    <!-- cách 2: dùng id (viết dấu # trước tên id)-->
+    <!-- cách 3: dùng class (viết dấu . trước tên class)-->
+    <h2 id="tieuDe" class="tieuDe">Trường đại học Mỏ - Địa Chất</h2>
+
+    <h3 class="tieuDe2">Lớp phát triển ứng dụng web 03</h3>
+
+</body>
+</html>
