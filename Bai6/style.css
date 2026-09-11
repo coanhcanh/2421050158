@@ -1,0 +1,70 @@
+body{
+    margin:0;
+}
+.danh-sach-muc{
+            padding:0;
+            margin:0;
+            /* bỏ dấu chấm ở danh sách khi dùng ul,il */
+            list-style:none;
+            display:flex;
+            /* gap là khoảng cách các đối tượng ở trong   */
+            gap: 20px;
+        }
+        .danh-muc{
+            background-color:#198cf0;
+            padding: 10px;
+        }
+        .lien-ket{
+            color:white;
+            /* bỏ gạch chân của thẻ a */
+            text-decoration:none;
+        }
+        main{
+            display:flex;
+        }
+        .trai{
+            width: 20%;
+            height:100vh;
+            /* border tạo đường viền */
+            /* có 3 tham số độ dày màu sắc và kiểu đường viền */
+            border-right: 2px solid #198cf0;
+        }
+        .khoi-dang-nhap{
+            width: 100%;
+            height: 100px;
+        }
+        form{
+            width: 80%;
+            margin: 10px auto;
+        }
+        .khoi-thong-tin{
+            width:100%;
+            margin-bottom: 10px;
+        }
+
+
+
+        input{
+            width: 100%;
+            padding: 5px 0;
+            border-radius: 5px;
+        }
+        .quen-mat-khau{
+            display: flex;
+            justify-content: flex-end;
+        }
+        .quen-mat-khau-lien-ket{
+            color:blue;
+            text-decoration: none;
+        }
+        .login{
+            
+        button{
+            width: 100%;
+            padding: 5px 0;
+        }
+        .phai{
+            width: 80%;
+            height:100vh;
+        }
+        
