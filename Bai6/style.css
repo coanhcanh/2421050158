@@ -11,7 +11,7 @@ body{
             gap: 20px;
         }
         .danh-muc{
-            background-color:#198cf0;
+            background-color:hsl(201.85deg 79.31% 54.51%);
             padding: 10px;
         }
         .lien-ket{
@@ -27,9 +27,10 @@ body{
             height:100vh;
             /* border tạo đường viền */
             /* có 3 tham số độ dày màu sắc và kiểu đường viền */
-            border-right: 2px solid #198cf0;
+            border-right: 2px solid hsl(201.85deg 79.31% 54.51%);
         }
         .khoi-dang-nhap{
+            
             width: 100%;
             height: 100px;
         }
@@ -58,7 +59,19 @@ body{
             text-decoration: none;
         }
         .login{
-            
+            width: 100%;
+            padding: 5px 0;
+            background-color:rgb(44, 129, 209);
+            color:white;
+            border-radius: 5px;
+        }
+        .login-365{
+            width: 100%;
+            padding: 5px 0;
+            background-color:rgb(62, 56, 238);
+            color:white;
+            border-radius: 5px;
+        }
         button{
             width: 100%;
             padding: 5px 0;
@@ -66,5 +79,111 @@ body{
         .phai{
             width: 80%;
             height:100vh;
+            flex: 1;
+            padding: 17px;
+            overflow: hidden;
         }
-        
+.tin-tuc{
+    border: 1px solid #159de0;
+    border-radius: 12px;
+    margin-bottom: 27px;
+    padding: 11px 12px 15px;
+    background: white;
+}
+.tieu-de-tin-tuc{
+    height: 46px;
+    border-bottom: 1px solid #159de0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7px;
+}
+.muc-tin-tuc{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px 15px 3px;
+}
+/* tin 1 */
+.tin-tuc-1{
+    min-width: 0;
+}
+.anh-TT{
+    height: 165px;
+    border-radius: 13px;
+    background: #e9e9e9;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.noi-dung-tin-tuc{
+    margin-top: 7px;
+}
+.ngay-thang{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.new-label {
+    background: #19b69e;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 3px 6px;
+    border-radius: 4px;
+}
+.date-line {
+    flex: 1;
+    height: 1px;
+    background: #ccc;
+}
+.date {
+    color: #888;
+    font-size: 14px;
+}
+
+/* thong báo */
+.thong-bao{
+    border: 1px solid #159de0;
+    border-radius: 12px;
+    margin-bottom: 27px;
+    padding: 11px 12px 15px;
+    background: white;
+}
+.tieu-de-thong-bao{
+    height: 46px;
+    border-bottom: 1px solid #159de0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7px;
+}
+.TB-trai{
+    width: 50%;
+    height:100vh;
+    border-right: 1px solid #ccc;
+}
+.muc-thong-bao{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px 15px 3px;
+}
+.thong-bao-1{
+    min-width: 0;
+}
+.anh-TB{
+    height: 165px;
+    border-radius: 13px;
+    background: #e9e9e9;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}  
+.noi-dung-thong-bao{
+    margin-top: 7px;
+}
