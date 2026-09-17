@@ -32,7 +32,7 @@ body{
         .khoi-dang-nhap{
             
             width: 100%;
-            height: 100px;
+            height: 85%;
         }
         form{
             width: 80%;
@@ -76,12 +76,20 @@ body{
             width: 100%;
             padding: 5px 0;
         }
+.logo-truong{
+    display: flex;
+    justify-content: center; 
+}
+.logo{
+    width: 60%;
+    height: 43%;
+}
         .phai{
             width: 80%;
             height:100vh;
             flex: 1;
             padding: 17px;
-            overflow: hidden;
+            overflow: auto;
         }
 .tin{
             width: 95%;
@@ -123,13 +131,15 @@ body{
 }
 .ngay-dang{
     text-align: right;
+    color: #888;
+    font-size: 14px;
 }
 .nua-trai{
     width: 50%;
     border-right: 1px solid gray;
 }
 .chi-tiet-bai-tb{
-    display: flex;
+    
     width: 46%;
 }
 
@@ -137,6 +147,40 @@ body{
     width: 50%;
 }
 .khoi-tb{
+    display: flex;  
+}
+.muc-tb{
     display: flex;
+    
+}
+.tieu-de-muc-tb{
+    width: 80%;
+}
+.ngay-dang-tb{
+    color: #888;
+    font-size: 14px;
+}
+.chi-tiet-bai-hd{
+    width: 46%;
+}
+.khoi-hd{
+    display: flex;  
+}
+.muc-hd{
+    display: flex;
+}
+.tieu-de-muc-hd{
+    width: 80%;
+}
+.ngay-dang-hd{
+    color: #888;
+    font-size: 14px;
+}
+.down{
+    display:flex;
+    justify-content: space-around;
+}
+.anh-qr{
+    width:10%
     
 }
