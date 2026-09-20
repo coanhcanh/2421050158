@@ -65,6 +65,8 @@ header{
     width: 95%;
     height: 20vh;
     margin: 20px auto;
+    
+    
 }
 .phim{
     display: flex;
@@ -94,4 +96,24 @@ header{
 }
 .ten-the-loai h2{
     margin-bottom: 0;
+}
+.ket-trang{
+    display: flex;
+    justify-content:center;
+    gap:30px;
+    color:gray;
+}
+.cot{
+    list-style: none;
+}
+.anh-co-dinh {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.anh-co-dinh img {
+    width: 100px;
+    height: auto;
 }
