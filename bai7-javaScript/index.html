@@ -78,7 +78,6 @@
         //tìm kiếm trong chuỗi và báo vị trí 
         var hoVaTen="Nguyễn Vũ Công Anh";
         document.writeln("<br>");
-
         //-1 là không có, từ 0 trở đi là có vị trí
         document.writeln(hoVaTen.indexOf("Anh"));
         document.writeln("<br>");
@@ -101,6 +100,149 @@
         //viết thường
         document.writeln(hoVaTen.toLocaleLowerCase());
         document.writeln("<br>");
+
+
+        // ngày 30/9
+        
+        // hàm date 
+        var homNay = new Date();
+        document.writeln("<br>");
+        document.writeln(homNay);
+
+        // ngày chọn trước
+        var ngay = new Date("9/30/2025");
+        document.writeln("<br>");
+        document.writeln(ngay);
+
+        // năm nay 
+        var namNay = homNay.getFullYear();
+        document.writeln("<br>");
+        document.writeln(namNay);
+
+        // tháng này (tháng bắt đầu từ 0 đến 11)
+        var thangNay = homNay.getMonth()+1;
+        document.writeln("<br>");
+        document.writeln(thangNay);
+
+        // getDate là ngày
+        var ngayHomNay = homNay.getDate();
+        document.writeln("<br>");
+        document.writeln(ngayHomNay);
+
+        // getDay là thứ bắt đầu từ 1 đến 7
+        var thuHomNay = homNay.getDay()+1;
+        document.writeln("<br>");
+        document.writeln(thuHomNay);
+
+        //
+        document.writeln("<br>");
+        document.writeln("Hôm nay là thứ "+ thuHomNay+" ngày "+ngayHomNay+" tháng "+ thangNay +" năm "+namNay);
+        document.writeln("<br>");
+
+        //mảng (vị trí bắt đầu từ 0)
+        var mangSo = [1,2,3,4,5];
+        document.writeln(mangSo[2]);
+        document.writeln("<br>");
+        document.writeln(mangSo.length);  //độ dài
+        document.writeln("<br>");
+
+        var mangTen=["Công Anh","Dung","Huy"];
+        document.writeln(mangTen[0]);  //gọi phần tử
+        document.writeln("<br>");
+
+        var mang=[1,2,3,4,5,"Công Anh","Dung","Huy"];
+        document.writeln(mang[5]);
+        document.writeln("<br>");
+
+        //conCat nối các mảng
+        var d = mang.concat(mangSo,mangTen);
+        document.writeln("<br>");
+        document.writeln(d);
+        document.writeln("<br>");
+        document.writeln(d.join("-")); //sau khi các phần tử mảng liên kết bởi dấu "-" thì thành chuỗi
+        document.writeln("<br>");
+        
+        // bỏ phần tử cuối cùng trong mảng
+        document.writeln(d.pop());
+        document.writeln("<br>");
+        document.writeln(d);
+        document.writeln("<br>");
+
+        //thêm phần tử vào mảng
+        d.push("Duy")
+        document.writeln(d);
+        document.writeln("<br>");
+
+        //đảo thứ tự
+        document.writeln(mangSo.reverse());
+        document.writeln("<br>");
+
+        //object
+        var thongTinSinhVien = {
+            ten: "Nguyen Vu Cong Anh",
+            namSinh : 2006,
+            queQuan: {
+                tinh: "Thanh Hoa",
+                xa: "Son Dien"
+            }
+        };
+        document.writeln(thongTinSinhVien.ten);
+        document.writeln("<br>");
+        document.writeln(thongTinSinhVien.queQuan.tinh);
+        //tính tuổi bằng thông tin trong object
+        tuoi=namNay - thongTinSinhVien.namSinh;
+        //thêm thông tinh vào object
+        thongTinSinhVien.tuoi=tuoi;
+
+        //console.log(thongTinSinhVien)  chỉ dùng để kiểm tra dữ liệu bằng console
+        
+        //boolean: true nam / false nữ
+        thongTinSinhVien.gioiTinh = true;
+
+        var danhSachSinhVien=[
+            {
+            ten: "Nguyen Vu Cong Anh",
+            namSinh : 2006,
+            queQuan: {
+                tinh: "Thanh Hoa",
+                xa: "Son Dien"
+            }
+        },
+        {
+            ten: "Nguyen Vu Cong Anh",
+            namSinh : 2006,
+            queQuan: {
+                tinh: "Thanh Hoa",
+                xa: "Son Dien"
+            }
+        }
+        ];
+        //console.log(sanhSachSinhVien);
+    
+
+        // == != > < so sánh trả về true false
+        // nếu == thì chỉ quan tâm giá trị
+        // nếu === phải cùng kiểu dữ liệu
+        var so1=10
+        var so2="10"
+        document.writeln("<br>");
+        document.writeln(so1 == so2);
+
+        // document.writeln("<br>");
+        // if(thu>6){
+        //     document.writeln("Cuối tuần");
+        // }else{
+        //     document.writeln("Đi học");
+        // };
+
+        document.writeln("<br>");
+        var so=5;
+        if(so%2==0){
+            document.writeln(so+" là số chẵn")
+        }else{
+            document.writeln(so + " là số lẻ")
+        }
+
     </script>
     <!-- External Javascript -->
     <!-- liên kết đến file script riêng -->

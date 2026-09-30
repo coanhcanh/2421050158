@@ -1,0 +1,30 @@
+header{
+    background-color: blue;
+    display: flex;
+    height: 45px;
+    
+}
+.thanhCongCu{
+    background-color: black;
+    display: flex;
+    width: 100%;
+    height: 45px;
+    gap: 20px;
+}
+.logo{
+    width: 100px;
+    margin:3px 0 14px 60px;
+    
+}
+main{
+    display:flex;
+}
+.trái{
+    background-color: aqua;
+    width: 15%;
+    height: 100vh;
+}
+.phải{
+    background-color: antiquewhite;
+    width:85%;
+}

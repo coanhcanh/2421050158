@@ -21,6 +21,7 @@ body{
         }
         main{
             display:flex;
+            
         }
         .trai{
             width: 20%;
@@ -28,6 +29,7 @@ body{
             /* border tạo đường viền */
             /* có 3 tham số độ dày màu sắc và kiểu đường viền */
             border-right: 2px solid hsl(201.85deg 79.31% 54.51%);
+            
         }
         .khoi-dang-nhap{
             
