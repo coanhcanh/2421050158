@@ -236,13 +236,91 @@
         // };
 
         document.writeln("<br>");
-        var so=5;
+        var so=200000000000000000000001;
         if(so%2==0){
             document.writeln(so+" là số chẵn")
         }else{
             document.writeln(so + " là số lẻ")
         }
 
+        document.writeln("<br>");
+        var so="200000000000000000000001";
+        if("02468".includes(so[so.length-1])){    //kiểm tra số cuối có phải chẵn hay kh
+            document.writeln(so+" là số chẵn")
+        }else{
+            document.writeln(so + " là số lẻ")
+        }
+        document.writeln("<br>");
+
+        //
+        //switch case
+        var d = new Date();
+        var theDay = d.getDay();
+        switch (theDay){
+            case 5:
+                document.writeln("Finally Friday");
+                break;
+            case 6:
+                document.writeln("Super Saturday");
+                break;
+            case 0:
+                document.writeln("Sleepy Sunday");
+                break;
+            default:
+                document.writeln("I'm looking forward to thí weekend");
+        }
+
+        document.writeln("<br>");
+        // vòng lặp for
+        for (var index =1; index <= 100; index++){
+            document.writeln("<br>");
+            document.writeln("anh xin lỗi lần thứ "+index);
+        }
+        
+        //dùng mảng cũ trước đó
+        for (var i=0;i<mang.length;i++){
+            document.writeln("<br>");
+            document.writeln(mang[i]);
+        }
+
+        for (var i=0;i<mang.length;i++){
+            if (isNaN(mang[i])){   //isNaN kiểm tra kiểu dữ liệu có khác số: true & false
+                document.writeln("<br>");
+                document.writeln("Xin chào "+mang[i]);
+            }
+        }
+        document.writeln("<br>");
+        //while kiểm tra trước rồi làm
+        var i=0;
+        while (i<=10){
+            document.writeln("The number is " +i);
+            document.writeln("<br>");
+            i=i+1;
+        }
+         
+        // do while làm rồi mới kiểm tra
+        var j =0;
+        do {
+            document.writeln("The number is "+j);
+            document.writeln("<br>");
+            j=j+1;
+        }while(j<=10)
+
+        //popup boxes (ô cảnh báo hiện lên trang)
+        alert("Hello");
+        var r = confirm("Press a button")
+        if(r==true){     //nếu chọn ok
+            document.writeln("You pressed OK!");
+        }
+        else{
+            document.writeln("You pressed CANCEL!");
+        }
+
+        var r=prompt("Nhập họ tên", "Nhập tên ở đây");
+        document.writeln(r);
+
+
+        
     </script>
     <!-- External Javascript -->
     <!-- liên kết đến file script riêng -->

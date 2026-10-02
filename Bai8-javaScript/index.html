@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //function  (hàm chỉ chạy khi được gọi tên hàm ra)
+        //hàm không tham số
+        function sayHello(){
+            document.writeln("Hello");
+        }
+        sayHello();
+
+        //hàm có tham số, có thể đổi tham số khi dùng
+        function sayHello2(ten){
+            document.writeln("<br>Xin chào bạn " +ten);
+        }
+        sayHello2("Công Anh");
+        sayHello2("Dung")
+
+        document.writeln("<br>");
+
+        function tinhTong(a,b){
+            if(isNaN(a)==false && isNaN(b)==false){
+                document.writeln("Tổng 2 số = "+(a+b))
+            }
+        }
+        var soThuNhat = prompt("Nhập số thứ 1 ","Nhập");
+        var soThuHai = prompt("Nhập số thứ 2 ","Nhập");
+        tinhTong(soThuNhat,soThuHai)
+
+
+        //btvn
+        //viết hàm tính điểm chữ dựa trên 3 điểm (ABC)
+        //tong = A*0,6 + B*0,3 + C*0,1 => điểm chữ tương ứng
+    </script>
+</body>
+</html>
