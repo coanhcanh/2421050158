@@ -40,7 +40,7 @@
         function tinhDiem(a,b,c){
             if(isNaN(a)==false && isNaN(b)==false && isNaN(c)==false){
                 if(a<0 || a>10 || b<0 || b>10 || c<0 || c>10){
-                    return "Điểm phải từ 0 đến 10";
+                    document.writeln("Điểm phải từ 0-10");
                 } else{
                 diemHe10 = a*0.6 + b*0.3 + c*0.1;
                 if (diemHe10 < 4) {
