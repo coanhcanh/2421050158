@@ -6,7 +6,55 @@
     <title>Document</title>
 </head>
 <body>
+    <div>
+        Nhập điểm A:<input id="diemA" type="number">
+    </div>
+    <div>
+        Nhập điểm B:<input id="diemB" type="number">
+    </div>
+    <div>
+        Nhập điểm C:<input id="diemC" type="number">
+    </div>
+    <div>
+        <!-- onclick khi bấm vào nút thì gọi hàm tinhDiemChu -->
+        <button onclick="tinhDiem()">Tính điểm</button>
+    </div>
+    <div>
+        Kết quả: <input id="ketQua" type="text">
+    </div>
+
+    <div>
+        Nhập năm sinh <input id="namSinh" type="number">
+    </div>
+    <div>
+        <button onclick="tinhTuoi()">Tính tuổi</button>
+    </div>
+    <div>
+        Tuổi của bạn là <input id="tuoi" typr="number">
+    </div>
+
     <script>
+        function tinhDiem(){
+            //lấy dữ liệu từ id bên html
+        var a=parseFloat(document.getElementById("diemA").value);
+        var b=parseFloat(document.getElementById("diemB").value);
+        var c=parseFloat(document.getElementById("diemC").value);
+
+        document.getElementById("ketQua").value = tinhDiemChu(a,b,c);
+        }
+
+        function tinhTuoi(){
+            var namSinh=parseFloat(document.getElementById("namSinh").value);
+            var homNay=new Date();
+            var namNay=homNay.getFullYear();
+            tuoii=namNay-namSinh;
+            document.getElementById("tuoi").value = tuoii;
+        }
+
+
+
+
+
         //function  (hàm chỉ chạy khi được gọi tên hàm ra)
         //hàm không tham số
         function sayHello(){
@@ -28,40 +76,78 @@
                 document.writeln("Tổng 2 số = "+(a+b))
             }
         }
-        var soThuNhat = prompt("Nhập số thứ 1 ","Nhập");
-        var soThuHai = prompt("Nhập số thứ 2 ","Nhập");
-        tinhTong(soThuNhat,soThuHai);
+        // var soThuNhat = prompt("Nhập số thứ 1 ","Nhập");
+        // var soThuHai = prompt("Nhập số thứ 2 ","Nhập");
+        // tinhTong(soThuNhat,soThuHai);
         document.writeln("<br>");
 
 
         //btvn
         //viết hàm tính điểm chữ dựa trên 3 điểm (ABC)
         //tong = A*0,6 + B*0,3 + C*0,1 => điểm chữ tương ứng
-        function tinhDiem(a,b,c){
-            if(isNaN(a)==false && isNaN(b)==false && isNaN(c)==false){
-                if(a<0 || a>10 || b<0 || b>10 || c<0 || c>10){
-                    document.writeln("Điểm phải từ 0-10");
-                } else{
-                diemHe10 = a*0.6 + b*0.3 + c*0.1;
-                if (diemHe10 < 4) {
-                    document.writeln("Điểm hệ chữ: F");
-                } else if (diemHe10 < 5.5) {
-                    document.writeln("Điểm hệ chữ: D");
-                } else if (diemHe10 < 7) {
-                    document.writeln("Điểm hệ chữ: C");
-                } else if (diemHe10 < 8.5) {
-                    document.writeln("Điểm hệ chữ: B");
-                } else {
-                    document.writeln("Điểm hệ chữ: A");
-                }           
-            }     
-            }
-        }
-        var diemA = prompt("Nhập điểm A","0-10");
-        var diemB = prompt("Nhập điểm B","0-10");
-        var diemC = prompt("Nhập điểm C","0-10");
-        tinhDiem(diemA,diemB,diemC);
+        // function tinhDiem(a,b,c){
+        //     if(isNaN(a)==false && isNaN(b)==false && isNaN(c)==false){
+        //         if(a<0 || a>10 || b<0 || b>10 || c<0 || c>10){
+        //             document.writeln("Điểm phải từ 0-10");
+        //         } else{
+        //         diemHe10 = a*0.6 + b*0.3 + c*0.1;
+        //         if (diemHe10 < 4) {
+        //             document.writeln("Điểm hệ chữ: F");
+        //         } else if (diemHe10 < 5.5) {
+        //             document.writeln("Điểm hệ chữ: D");
+        //         } else if (diemHe10 < 7) {
+        //             document.writeln("Điểm hệ chữ: C");
+        //         } else if (diemHe10 < 8.5) {
+        //             document.writeln("Điểm hệ chữ: B");
+        //         } else {
+        //             document.writeln("Điểm hệ chữ: A");
+        //         }           
+        //     }     
+        //     }
+        // }
+        // var diemA = prompt("Nhập điểm A","0-10");
+        // var diemB = prompt("Nhập điểm B","0-10");
+        // var diemC = prompt("Nhập điểm C","0-10");
+        // tinhDiem(diemA,diemB,diemC);
 
+        //chuyển chuỗi thành số
+        //parseInt()
+        //vd parseInt("42")         result=42
+        //vd parseInt("42.33")      result=42
+        //vd parseFloat("42.33")    result=42.33
+        //vd 3+3+parseInt("3")      result=9
+
+        function tinhDiemChu(){
+            //lấy dữ liệu từ id bên html
+        var a=document.getElementById("diemA").value;
+        var b=document.getElementById("diemB").value;
+        var c=document.getElementById("diemC").value;
+            var tong=a*0.6 + b*0.3 + c*0.1;
+            var kq="";
+            if(tong>=0 && tong<4){
+                kq="F";
+            }
+            else if(tong>=4 && tong<5.5){
+                kq="D";
+            }
+            else if(tong>=5.5 && tong<7){
+                kq="C";
+            }
+            else if(tong>=7 && tong<8.5){
+                kq="B";
+            }
+            else if(tong>=8.5 && tong<=10){
+                kq="A";
+            }
+            else{
+                kq="Điểm không hợp lệ";
+            }
+            return kq;
+        }
+
+        
+        
+        
 
     </script>
 </body>
