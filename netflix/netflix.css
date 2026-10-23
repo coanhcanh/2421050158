@@ -54,11 +54,13 @@ header{
 .banner{
     background-color: white;
     width: 95%;
+   
     margin: 20px auto;
     border-radius: 20px;
 }
 .banner-anh{
     width: 100%;
+    height: 700px;
     border-radius: 20px;
 }
 .danh-sach-the-loai{
