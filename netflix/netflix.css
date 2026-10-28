@@ -108,14 +108,4 @@ header{
 .cot{
     list-style: none;
 }
-.anh-co-dinh {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    
-}
 
-.anh-co-dinh img {
-    width: 100px;
-    height: auto;
-}

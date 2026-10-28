@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 10 js</title>
+    <style>
+        
+        .video{
+            
+            margin: auto;
+            text-align: center;
+        }
+
+        .danh-sach{
+            width: 80%;
+            display:flex;
+            margin:50px auto;
+            justify-content: space-between;
+        }
+        .anh{
+            width: 24%;
+            height: 100px;
+            background-color: aqua;
+            img{width: 100%;
+            height: 150px;}
+        }
+
+    </style>
+</head>
+<body>
+    <!-- màn xem -->
+    <div class="video">
+        <iframe  src="https://www.youtube.com/embed/58IkVCh3hWU?si=3JgOvEAU3fkSdIJv"
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h3 class="ten">Tầng thượng 102 - Cá Hồi Hoang</h3>
+    </div>
+
+    <div class="danh-sach">
+        <div class="anh" onclick="chonVid(1)">
+            <img src="Anh/tangThuong102.png" alt="">
+            <p>Tầng thượng 102 - Cá Hồi Hoang</p>
+        </div>
+
+        <div class="anh" onclick="chonVid(2)">
+            <img src="Anh/0h00.png" alt="">
+            <p>0h00 - Phạm Trần Phương</p>
+        </div>
+        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/-K5UCLLUlfM?si=TJzU4ucZy7XJih13"
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+
+        <div class="anh" onclick="chonVid(3)">
+            <img src="Anh/tuDau.png" alt="">
+            <p>Từ Đầu - Chilies</p>
+        </div>
+        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/icb7XT3n2rQ?si=yZAvJgESJikzkHxs"
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+
+        <div class="anh" onclick="chonVid(4)">
+            <img src="Anh/acMongDep.png" alt="">
+            <p>Ác mộng đẹp - Đạt G</p>
+        </div>
+        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/S3S3sd3CFZU?si=loxHclYCwO0YIWEZ" 
+         title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
+         web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+    </div>
+
+    <script>
+        var danhSachVid=[
+            {
+                id:1,
+                ten: "Tầng thượng 102 - Cá Hồi Hoang",
+                duongDanAnh: "Anh/tangThuong102.png",
+                duongDanYtb: "https://www.youtube.com/embed/58IkVCh3hWU?si=3JgOvEAU3fkSdIJv",
+            },
+            {
+                id:2,
+                ten: "0h00 - Phạm Trần Phương",
+                duongDanAnh: "Anh/0h00.png",
+                duongDanYtb: "https://www.youtube.com/embed/-K5UCLLUlfM?si=TJzU4ucZy7XJih13",
+            },
+            {
+                id:3,
+                ten: "Từ Đầu - Chilies",
+                duongDanAnh: "Anh/tuDau.png",
+                duongDanYtb: "https://www.youtube.com/embed/icb7XT3n2rQ?si=yZAvJgESJikzkHxs",
+            },
+            {
+                id:4,
+                ten: "Ác mộng đẹp - Đạt G",
+                duongDanAnh: "Anh/acMongDep.png",
+                duongDanYtb: "https://www.youtube.com/embed/9eL4Scy4-Ys?si=xmajVBi_nqkBPXoI",
+            },
+        ];
+
+        function chonVid(id){
+            for (let i = 0; i < danhSachVid.length; i++) {
+                if(danhSachVid[i].id == id) {   
+                    document.getElementsByClassName("ten")[0].innerHTML=danhSachVid[i].ten;
+                    document.getElementsByTagName("iframe")[0].src=danhSachVid[i].duongDanYtb;
+                }
+            }
+        }
+
+        
+    </script>
+</body>
+</html>
