@@ -16,7 +16,7 @@ CREATE TABLE nguoi_dung (
     ho_ten varchar(50) NOT NULL,
     ngay_sinh date NOT NULL,
     so_dien_thoai varchar(10) NOT NULL,
-    gioi_tinh boolean  NOT NULL
+    gioi_tinh boolean  NOT NULL   --Nam 1, Nữ 0--
 )
 
 -- the_loai
@@ -111,10 +111,19 @@ INSERT INTO `phim_dien_vien`(`phim_id`, `dien_vien_id`) VALUES ('4','4');
 INSERT INTO `phim_dien_vien`(`phim_id`, `dien_vien_id`) VALUES ('5','5');
 
 --Người dùng--
-INSERT INTO `nguoi_dung`(`ten_dang_nhap`, `mat_khau`, `email`, `ho_ten`, `ngay_sinh`, `so_dien_thoai`, `gioi_tinh`) VALUES ('CAnh','27122006','coanhcanh06@gmail.com','Nguyễn Vũ Công Anh','2006-12-27','0392442712','Nam')
+INSERT INTO `nguoi_dung`(`ten_dang_nhap`, `mat_khau`, `email`, `ho_ten`, `ngay_sinh`, `so_dien_thoai`, `gioi_tinh`) VALUES ('CAnh','27122006','coanhcanh06@gmail.com','Nguyễn Vũ Công Anh','2006-12-27','0392442712','1')  --Nam 1, Nữ 0--
 
 
 SELECT * FROM `phim` p
 join `dao_dien`
 on p.dao_dien_id = dd.id 
 join `phim_the_loai` ptl
+
+SELECT p.ten_phim, dd.ho_ten as `dao_dien`, tl.ten_the_loai FROM `phim` p
+join `dao_dien` dd 
+on p.dao_dien_id = dd.id 
+join `phim_the_loai` ptl 
+on p.id = ptl.phim_id 
+JOIN the_loai tl 
+on tl.id = ptl.the_loai_id
+where p.id = 1;
