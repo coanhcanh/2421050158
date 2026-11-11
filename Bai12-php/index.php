@@ -51,7 +51,7 @@
     //     logic 
     // } else {
     //     logic
-    // }
+    // }    
 
     if ($soThuNhat+$soThuHai < 15){
         echo "nhỏ hơn 15";
