@@ -7,11 +7,5 @@
 </head>
 <body>
     <h1>Đây là trang chủ</h1>
-    <?php
-        session_start();
-        if(!isset($_SESSION['dangnhap'])){
-            header("Location: dangnhap.php");
-        }
-    ?>
 </body>
 </html>

@@ -46,13 +46,21 @@
     </div>
 
     <?php
+        // include để nối 2 file php
+        include 'connect.php';
+        session_start();
+        
         if(isset($_POST['tenDangNhap']) && isset($_POST['matKhau'])) {
             $tenDangNhap = $_POST['tenDangNhap'];
             $matKhau = $_POST['matKhau'];
-            if($tenDangNhap == "canh2712" && $matKhau == "0392442712"){
-                session_start();
+
+            $sql = "SELECT * FROM `nguoi_dung` WHERE ten_dang_nhap = '$tenDangNhap' and mat_khau = '$matKhau'";
+
+            $result = mysqli_query($conn,$sql);
+
+            if(mysqli_num_rows($result) > 0){
                 $_SESSION['dangnhap']="thanhcong";
-                header("Location: trangchu.php");
+                header("Location: index.php");
             } else{
                 echo "Tên đăng nhập không chính xác";
             }
