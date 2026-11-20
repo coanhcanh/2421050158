@@ -8,6 +8,17 @@
         .ttk{
             background-color:aqua;
             padding: 5px;
+            
+        }
+        table{
+            margin:5px;
+            text-align:center;
+        }
+        .capnhat{
+            background-color:green;
+        }
+        .xoa{
+            background-color:red;
         }
     </style>
 </head>
@@ -18,8 +29,8 @@
         $sql = "select * from nguoi_dung";
         $result = mysqli_query($conn,$sql);
     ?>
-
-    <table>
+    
+    <table border>
         <tr>
             <th>ID</th>
             <th>Tên đăng nhập</th>
@@ -28,6 +39,7 @@
             <th>Ngày sinh</th>
             <th>Số điện thoại</th>
             <th>Giới tính</th>
+            <th>Chức năng</th>
         </tr>
         <?php
             while($row = mysqli_fetch_assoc($result))
@@ -41,7 +53,12 @@
             <td><?php echo $row['ho_ten'] ?></td>
             <td><?php echo $row['ngay_sinh'] ?></td>
             <td><?php echo $row['so_dien_thoai'] ?></td>
-            <td><?php echo $row['gioi_tinh'] ?></td>
+            <!-- ==true thì Nam còn sai là Nữ -->
+            <td><?php echo $row['gioi_tinh']==true?"Nam":"Nữ" ?></td>
+            <td>
+                <a class="capnhat" href="index.php?page_layout=capnhattaikhoan&id=<?php echo $row['id']?>">Cập nhật</a>
+                <a class="xoa" href="index.php?page_layout=xoataikhoan&id=<?php echo $row['id']?>">Xóa</a>
+            </td>
         </tr>
         <!-- dấu đóng ngoặc của phía trên -->
         <?php
