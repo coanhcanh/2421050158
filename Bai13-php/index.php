@@ -51,7 +51,7 @@
                     include 'trangchu.php';
                     break;
                 case 'taikhoan':
-                    include 'taikhoan.php';
+                    include 'tai-khoan/taikhoan.php';
                     break;
                 case 'danhmuc':
                     include 'danhmuc.php';
@@ -60,13 +60,13 @@
                     include 'phim.php';
                     break;
                 case 'themtaikhoan':
-                    include 'themtaikhoan.php';
+                    include 'tai-khoan/themtaikhoan.php';
                     break;
                 case 'capnhattaikhoan':
-                    include 'capnhattaikhoan.php';
+                    include 'tai-khoan/capnhattaikhoan.php';
                     break;
                 case 'xoataikhoan':
-                    include 'xoataikhoan.php';
+                    include 'tai-khoan/xoataikhoan.php';
                     break;
             }
         }
