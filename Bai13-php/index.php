@@ -17,6 +17,7 @@
             text-decoration:none;
             color:white;
             border-radius: 25px;
+            border :1px solid blue;
         }
         a:hover{
             border :1px solid white;
@@ -53,12 +54,6 @@
                 case 'taikhoan':
                     include 'tai-khoan/taikhoan.php';
                     break;
-                case 'danhmuc':
-                    include 'danhmuc.php';
-                    break;
-                case 'phim':
-                    include 'phim.php';
-                    break;
                 case 'themtaikhoan':
                     include 'tai-khoan/themtaikhoan.php';
                     break;
@@ -67,6 +62,21 @@
                     break;
                 case 'xoataikhoan':
                     include 'tai-khoan/xoataikhoan.php';
+                    break;
+                case 'danhmuc':
+                    include 'danhmuc.php';
+                    break;
+                case 'phim':
+                    include 'phim/phim.php';
+                    break;
+                case 'themphim':
+                    include 'phim/themphim.php';
+                    break;
+                case 'capnhatphim':
+                    include 'phim/capnhatphim.php';
+                    break;
+                case 'xoaphim':
+                    include 'phim/xoaphim.php';
                     break;
             }
         }

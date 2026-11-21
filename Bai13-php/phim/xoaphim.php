@@ -6,6 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Phim</h1>
+    <h1>Xóa phim</h1>
 </body>
 </html>

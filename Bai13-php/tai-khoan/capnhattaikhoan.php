@@ -10,7 +10,7 @@
             width: 15%;
             background-color: aqua;
             padding:10px;
-            border-radius:10px
+            border-radius:10px;
         }
         .the{
             display: block;
